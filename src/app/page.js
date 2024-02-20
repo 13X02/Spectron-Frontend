@@ -94,12 +94,11 @@ export default function Home() {
   }
 
   const onUploadClick = async () => {
-    setIsLoading(true);
     if (!image) {
       alert("Please select an image");
       return;
     }
-
+    setIsLoading(true);
     setReturnUrl(null);
     const formData = new FormData();
     formData.append("image", image );
